@@ -1,0 +1,242 @@
+body {
+    text-rendering: optimizelegibility;
+    min-width: 980px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #434343;
+    margin: 0;
+    padding-top: 42px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    background: #1197d4;
+    text-transform: uppercase;
+}
+.button:hover {
+    background: #0d75a5;
+}
+
+header {}
+nav {
+    margin-top: -42px;
+    position: fixed;
+    color: #555;
+    border-bottom: 1px solid #e4e4e4;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    height: 22px;
+}
+.logo {
+    margin-left: 60px;
+}
+.login {
+    float: right;
+    margin-right: 60px;
+    text-transform: uppercase;
+}
+.intro {
+    background: no-repeat center center scroll;
+    background-size: cover;
+    background-position: 50% 50%;
+    clear: both;
+    color: #555;
+    height: 500px;
+    text-align: center;
+}
+.intro.white {
+    color: #fff;
+}
+.intro h1 {
+    padding-top: 30px;
+    font-size: 5em;
+    line-height: 1.2em;
+    margin: 0 0 30px 0;
+    text-shadow: #000 0px 1px 0px;
+}
+.intro.white h1 {
+    text-shadow: #000 0px 3px;
+}
+.sign-up, .sign-in {
+    width: 220px;
+    margin: 0 auto;
+}
+.facebook {
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+.facebook img {
+    float: left;
+}
+.facebook div {
+    background: #658AD0;
+}
+.facebook div:hover {
+    background: #4E6FAE;
+}
+.or {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 35px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.sign-up,
+.sign-in {
+    font-size: 16px;
+}
+.sign-up input,
+.sign-in input{
+    width: 170px;
+}
+.modal .sign-in input[type=text],
+.modal .sign-in input[type=password]{
+    background: #EEEEEE;
+}
+input::-moz-placeholder{
+    color: #878787;
+}
+.sign-up input[type=email],
+.sign-up input[type=text],
+.sign-up input[type=password],
+.sign-in input[type=text],
+.sign-in input[type=password] {
+    display: block;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 30px 10px 16px;
+    margin-bottom: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 24px;
+
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.sign-up input[type=email]:focus,
+.sign-up input[type=text]:focus,
+.sign-up input[type=password]:focus,
+.sign-in input[type=email]:focus,
+.sign-in input[type=text]:focus,
+.sign-in input[type=password]:focus {
+    border-color: #3888ba;
+    box-shadow: #E8AEAC 0px 0px 3px 0px;
+}
+.sign-in input[type=checkbox] {
+    width: 20px;
+}
+.sign-up .button,
+.sign-in .button{
+    width: 100%;
+    height: 43px;
+    font-size: 16px;
+}
+
+article {}
+article h2 {
+    color: #999999;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 30px 0 20px;
+    text-align: center;
+    line-height: 40px;
+}
+article .products {
+    padding: 0 65px;
+}
+article .products img {
+    margin: 7px;
+}
+.bottom-sign-in {
+    padding: 50px 0;
+    text-align: center;
+    color: #aaa;
+    font-size: 19px;
+}
+.bottom-sign-in .button {
+    font-weight: bold;
+}
+
+footer {
+    margin: 40px 0 0 0;
+    padding: 40px 0 40px 30px;
+    border-top: 1px solid #ccc;
+    font-size: 16px;
+}
+footer a {
+    color: #08c;
+}
+footer .bottom a {
+    color: #777;
+}
+
+.logo, .squared-logo {
+    float: left;
+    margin-right: 10px;
+}
+
+
+.modal-backgroound {
+    display: none;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal {
+    background: #FEFEFE;
+    position: fixed;
+    left: 50%;
+    top: 50px;
+    width: 500px;
+    margin-left: -250px;
+    display: none;
+    border: 10px solid #E4E4E4;
+}
+.modal h1 {
+    background: #F6F6F6;
+    padding: 58px 0;
+    margin: 0 0 60px 0;
+    font-size: 35px;
+    text-align: center;
+    border-bottom: 3px solid #CECCCC;
+}
+.modal .sign-in-container {
+    margin-bottom: 70px;
+    display: block;
+}
+
+.sign-in-container {
+    display: none;
+}
+.sign-in .stay_signed {
+    margin: 20px 0;
+}
+.sign-in .links {
+    margin-top: 20px;
+}
+.sign-in a {
+    color: #0088CC;
+    padding: 3px 0;
+    text-align: center;
+    display: block;
+}
