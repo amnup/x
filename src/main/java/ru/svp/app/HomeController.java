@@ -15,16 +15,25 @@
  */
 package ru.svp.app;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.io.IOUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.api.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Simple little @Controller that invokes Facebook and renders the result.
@@ -35,7 +44,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 
 	private final Facebook facebook;
-	
+
+    @Autowired
+    ServletContext context;
+
+
 	@Inject
 	public HomeController(Facebook facebook) {
 		this.facebook = facebook;
@@ -47,5 +60,16 @@ public class HomeController {
 		model.addAttribute("friends", friends);
 		return "home";
 	}
+
+    @ResponseBody
+    @RequestMapping(value = "/photo2", method = RequestMethod.GET, produces = MediaType.IMAGE_JPEG_VALUE)
+    public byte[] testphoto(HttpServletRequest request) throws IOException {
+        InputStream in = request.getSession().getServletContext().getResourceAsStream("c:/resources/ert.jpg");
+
+        URL url = new URL("http://cs11121.vk.me/u2845803/-6/x_f5d5ce81.jpg");
+        InputStream imageStream = url.openStream();
+
+        return IOUtils.toByteArray(imageStream);
+    }
 
 }
